@@ -7,6 +7,7 @@ const port = 3000;
 
 const cache = {};
 
+// blog-stats (with caching) 
 app.get('/api/blog-stats', async (req, res) => {
   const apiUrl = 'https://intent-kit-16.hasura.app/api/rest/blogs';
   const adminSecret = '32qR4KmXOIpsGPQKMqEJHGJS27G5s7HdSKO3gdtQd2kv5e852SiYwWNfxkZOBuQ6';
@@ -67,6 +68,7 @@ app.get('/api/blog-stats', async (req, res) => {
   }
 });
 
+// blog-search (with caching)
 app.get('/api/blog-search', async (req, res) => {
   const apiUrl = 'https://intent-kit-16.hasura.app/api/rest/blogs';
   const adminSecret = '32qR4KmXOIpsGPQKMqEJHGJS27G5s7HdSKO3gdtQd2kv5e852SiYwWNfxkZOBuQ6';
